@@ -29,11 +29,10 @@ const menuIsOpen = ref(false)
   enter-to-class="translate-x-0"
   leave-active-class="-translate-x-full"
 >
-  <ul v-show="menuIsOpen">
-    <li><a href="#">item 1</a></li>
-    <li><a href="#">item 2</a></li>
-    <li><a href="#">item 3</a></li>
-  </ul>
+<ul v-show="menuIsOpen">
+          <li><RouterLink to="/" class="text-red-500 underline"> Accueil </RouterLink></li>
+          <li><RouterLink to="/donnee" class="text-red-500 underline"> Données </RouterLink></li>
+        </ul>
   </Transition>
 </nav>
   </header>
