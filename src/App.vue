@@ -6,6 +6,9 @@ onErrorCaptured((err, instance, info) => {
   console.error('erreur : ', err, '\ninfo : ', info, '\ncomposant : ', instance)
   return true
 })
+
+import { ref } from "vue";
+const menuIsOpen = ref(false)
 </script>
 
 <template>
