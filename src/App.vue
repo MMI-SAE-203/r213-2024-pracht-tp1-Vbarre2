@@ -23,11 +23,18 @@ const menuIsOpen = ref(false)
 </button>
 <!-- nav#mainNav>ul>li*3>a[href="#"]{item $} -->
 <nav id="mainNav">
+  <Transition
+  class="transition-transform duration-1000"
+  enter-from-class="-translate-x-full"
+  enter-to-class="translate-x-0"
+  leave-active-class="-translate-x-full"
+>
   <ul v-show="menuIsOpen">
     <li><a href="#">item 1</a></li>
     <li><a href="#">item 2</a></li>
     <li><a href="#">item 3</a></li>
   </ul>
+  </Transition>
 </nav>
   </header>
   <RouterView v-slot="{ Component }">
